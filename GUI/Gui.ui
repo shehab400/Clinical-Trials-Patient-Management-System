@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>808</width>
-    <height>379</height>
+    <height>395</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,7 +32,7 @@
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../task 1/images/time-management.png</pixmap>
+            <pixmap>../Assets/images/time-management.png</pixmap>
            </property>
           </widget>
          </item>
@@ -92,7 +92,7 @@
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../task 1/images/download (2) (1).png</pixmap>
+            <pixmap>../Assets/images/download (2) (1).png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>false</bool>
@@ -281,7 +281,7 @@
      <x>0</x>
      <y>0</y>
      <width>808</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLoad">
