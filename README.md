@@ -33,7 +33,7 @@ To run the project, follow these steps:
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/clinical-trials.git
+    git clone https://github.com/your-username/clinical-trials.git](https://github.com/shehab400/Clinical-Trials-Patient-Management-System
     ```
 
 2. Navigate to the project directory:
@@ -81,4 +81,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ---
 
-Replace the GitHub repository URL in the "Clone this repository" section with the URL of your own GitHub repository. You may also want to add additional sections such as "Acknowledgments," "License," and "Contributing" depending on the nature of your project and community guidelines. Let me know if there's anything else I can help you with!
