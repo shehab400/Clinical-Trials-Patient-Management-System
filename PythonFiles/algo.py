@@ -35,7 +35,14 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def add_patient(self):
         sex = self.comboBox.currentText()
-        age = int(self.lineEdit.text())
+        if self.lineEdit.text() :
+            if self.lineEdit.text()=='0':
+                QtWidgets.QMessageBox.information(self, 'Failed', 'Please write correct patient age.')
+                return
+            age = int(self.lineEdit.text())
+        else:
+            QtWidgets.QMessageBox.information(self, 'Failed', 'Please write the patient age.')
+            return
         disease = self.comboBox_3.currentText()
         new_patient = Patient(sex, age, disease)
         Patient.patient_data.append(new_patient)
@@ -44,11 +51,13 @@ class MainWindow(QtWidgets.QMainWindow):
     def select_patient(self):
         sex = self.comboBox_4.currentText()
         age_range = self.lineEdit_2.text()
-        if age_range != '':
+        if '-' in age_range:
             age_min, age_max = map(int, age_range.split('-'))
         else:
             age_min = None
             age_max = None
+            QtWidgets.QMessageBox.information(self, 'Failed', 'Please write the patients age in correct form i.e 18-40.')
+            return
         disease = self.comboBox_6.currentText()
         filtered_patients = self.divide_and_conquer_search(Patient.patient_data, sex, age_min, age_max, disease)
         if not filtered_patients:
@@ -115,9 +124,3 @@ class MainWindow(QtWidgets.QMainWindow):
         filtered_patients += self.divide_and_conquer_search(left_half, sex, age_min, age_max, disease)
         filtered_patients += self.divide_and_conquer_search(right_half, sex, age_min, age_max, disease)
         return filtered_patients
-
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec_())
